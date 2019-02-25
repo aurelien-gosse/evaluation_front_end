@@ -20,6 +20,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "imagemin": "^6.1.0",
+    "i": "^0.3.6",
     "imagemin-giflossy": "^5.1.10",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
