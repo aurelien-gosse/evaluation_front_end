@@ -47,9 +47,6 @@
       }
       .navigation {
         ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
           li {
             margin-bottom: 10px;
             a {
@@ -64,7 +61,10 @@
         }
       }
       .newsletter {
+        // formulaire
         form {
+          display: flex;
+          width: 100%;
           input {
             background: transparent;
             padding: 10px;
@@ -83,9 +83,6 @@
       }
       .instafeed {
         ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
           display: flex;
           flex-wrap: wrap;
           li {
