@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header parallax-home header-home" data-parallax="scroll" data-speed="0.1"
+    data-image-src="img/hero-bg.jpg">
     <!-- menu top au dessus du menu -->
     <div class="menu-top">
       <div class="menu-top--left">
@@ -55,6 +56,57 @@
       </button>
       <!-- div pour faire le filtre -->
       <div class="filtre"></div>
+    </div>
+    <!-- partie texte du header -->
+    <div class="wrapper">
+      <div class="header-txt">
+        <h6>Away from monotonous life</h6>
+        <h1>Magical Travel</h1>
+        <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You
+          may
+          see some for as low as $.17 each.</p>
+        <a href="#">Get Started</a>
+      </div>
+      <div class="div-forms" id="apphome">
+        <div class="div-btns">
+          <a href="#" class="btn-form active" @click.prevent="changeChoix('form1')">Flights</a>
+          <a href="#" class="btn-form" @click.prevent="changeChoix('form2')">Hotels</a>
+          <a href="#" class="btn-form" @click.prevent="changeChoix('form3')">Holidays</a>
+        </div>
+        <div class="div-form" v-if="choixForm == 'form1'">
+          <form>
+            <input type="text" name="name" placeholder="From">
+            <input type="text" name="to" placeholder="To">
+            <input type="text" name="start" placeholder="Start">
+            <input type="text" name="return" placeholder="Return">
+            <input type="number" name="adults" placeholder="Adults">
+            <input type="number" name="child" placeholder="Child">
+            <a href="#">Search flights</a>
+          </form>
+        </div>
+        <div class="div-form" v-if="choixForm == 'form2'">
+          <form>
+            <input type="text" name="name" placeholder="From">
+            <input type="text" name="to" placeholder="To">
+            <input type="text" name="start" placeholder="Start">
+            <input type="text" name="return" placeholder="Return">
+            <input type="number" name="adults" placeholder="Adults">
+            <input type="number" name="child" placeholder="Child">
+            <a href="#">Search Hotels</a>
+          </form>
+        </div>
+        <div class="div-form" v-if="choixForm == 'form3'">
+          <form>
+            <input type="text" name="name" placeholder="From">
+            <input type="text" name="to" placeholder="To">
+            <input type="text" name="start" placeholder="Start">
+            <input type="text" name="return" placeholder="Return">
+            <input type="number" name="adults" placeholder="Adults">
+            <input type="number" name="child" placeholder="Child">
+            <a href="#">Search Holidays</a>
+          </form>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -118,10 +170,11 @@
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   <script src="js/main.min.js"></script>
-  <!-- <script src="js/app.min.js"></script> -->
+  <script src="js/apphome.min.js"></script>
 </body>
 
 </html>
