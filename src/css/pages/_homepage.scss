@@ -1,7 +1,7 @@
 .parallax-home {
   height: 100%;
   // filtre sur le parallax
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -11,8 +11,8 @@
   }
 }
 // css uniquement pour le header de la page home
-.header-home{
-  .wrapper{
+.header-home {
+  .wrapper {
     z-index: 2;
     @media screen and (min-width: 600px) {
       width: 580px;
@@ -71,13 +71,13 @@
         display: inline-block;
         padding: 10px 30px;
         color: #fff;
-        transition: .3s background ease-in-out;
-        &:hover{
+        transition: 0.3s background ease-in-out;
+        &:hover {
           background: #222;
         }
       }
     }
-    .div-forms{
+    .div-forms {
       margin-bottom: 40px;
       padding: 0 15px;
       @media screen and (min-width: 990px) {
@@ -122,8 +122,8 @@
             display: inline-block;
             padding: 10px 30px;
             color: #fff;
-            transition: .3s background ease-in-out;
-            &:hover{
+            transition: 0.3s background ease-in-out;
+            &:hover {
               background: #222;
             }
           }
@@ -132,3 +132,121 @@
     }
   }
 }
+// section blog
+.blog {
+  margin: 100px 10px;
+  .wrapper {
+    @media screen and (min-width: 600px) {
+      width: 580px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 800px) {
+      width: 780px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 890px) {
+      width: 970px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 1180px;
+      margin: 0 auto;
+    }
+    .blog-txt {
+      text-align: center;
+      margin-bottom: 80px;
+      h4 {
+        font-weight: 600;
+        font-size: 36px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #777777;
+      }
+    }
+    // swiper blog
+    .blog-swiper {
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      .swiper-wrapper {
+        margin-bottom: 30px;
+        .swiper-slide {
+          cursor: pointer;
+          &:hover {
+            .swiper-img {
+              img {
+                transform: scale(1.05);
+              }
+            }
+          }
+          // image du swiper
+          .swiper-img {
+            width: 100%;
+            img {
+              transition: 0.3s transform ease-in-out;
+              width: 100%;
+            }
+          }
+          // contenu texte du swiper
+          .swiper-txt {
+            .swiper-btn {
+              ul {
+                display: flex;
+                margin-top: 20px;
+                a {
+                  font-weight: 400;
+                  font-size: 12px;
+                  color: #222;
+                  text-decoration: none;
+                  border: solid 1px #eeeeee;
+                  //background: #f8b600;
+                  display: inline-block;
+                  padding: 10px 15px;
+                  margin-right: 10px;
+                  transition: 0.3s all ease-in-out;
+                  &:hover {
+                    color: #fff;
+                    background: #f8b600;
+                  }
+                }
+              }
+            }
+            & > a {
+              font-weight: 600;
+              font-size: 22px;
+              text-decoration: none;
+              color: #222;
+              transition: 0.3s color ease-in-out;
+              &:hover {
+                color: #f8b600;
+              }
+            }
+            p {
+              font-weight: 400;
+              font-size: 14px;
+              color: #777777;
+            }
+            h6 {
+              font-weight: 400;
+              font-size: 14px;
+              color: #222;
+              margin-bottom: 40px;
+            }
+          }
+        }
+      }
+      // pagination du swiper
+      .swiper-pagination {
+        span {
+          width: 10px;
+          height: 10px;
+          border-radius: 0;
+          background: #f8b600;
+        }
+      }
+    }
+  }
+}
+  
